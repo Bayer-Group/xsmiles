@@ -1,0 +1,11 @@
+.smiles-view p {
+    font-size: 14px;
+    display: block;
+    width: 500px;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 0%;
+    word-wrap: break-word;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bolder;
+}

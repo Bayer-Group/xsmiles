@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Heberle"
+  given-names: "Henry"
+  orcid: "https://orcid.org/0000-0003-1964-268X"
+title: "XSMILES: interactive visualization for molecules, SMILES and XAI scores"
+version: 0.5.7
+doi: xxxxx
+date-released: 2022-08-25
+url: "https://github.com/xsmiles"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Heberle"
+    given-names: "Henry"
+    orcid: "https://orcid.org/0000-0003-1964-268X"
+  - family-names: "Zhao"
+    given-names: "Linlin"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Schmidt"
+    given-names: "Sebastian"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Wolf"
+    given-names: "Thomas"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Heinrich"
+    given-names: "Julian"
+    orcid: "https://orcid.org/0000-0000-0000-0000"    
+  doi: "10.0000/00000"
+  journal: "Article in preparation."
+  month: 
+  start:  # First page number
+  end:  # Last page number
+  title: "XSMILES: interactive visualization for molecules, SMILES and XAI scores"
+  issue: 
+  volume: 
+  year: 2022

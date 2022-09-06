@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "module": "commonjs", //"module": "esnext",
+        "noImplicitAny": true,
+        "outDir": "./dist/",
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": false,
+        "baseUrl": ".",
+        "preserveSymlinks": true,
+        "declaration": true,
+        "composite": true,
+        "declarationMap": true,
+        "declarationDir": "dist/module"
+    },
+    "include": ["src/", "./package.json"],
+    "exclude": ["node_modules", "dist"]
+}
