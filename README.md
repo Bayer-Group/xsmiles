@@ -72,7 +72,7 @@ Another example is shown in `dist/knime/GenericJavascriptView.js`, where we load
 Please refer to https://github.com/rdkit/rdkit-js to learn how to load RDKit.
 *In future versions we want to include the dependency in the npm package, so you won't need to worry about it.*
 
-Run `npm install xsmiles` to install the module package and use XSMILES in another web-based system.
+Run `npm install xsmiles` (unofficial) to install the module package and use XSMILES in another web-based system.
 
 If `xsmiles` is not in the `npm repository`, please download the one of the released versions from this repository and run the code below, changing the version accordingly:
 
