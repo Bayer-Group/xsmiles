@@ -44,7 +44,7 @@ year = {2022}
 
 - [JupyterLab plugin](https://github.com/Bayer-Group/xsmiles-jupyterlab/)
 
-- [TBD: PiPY repository](http://)
+- [Unofficial Pypi repository](https://pypi.org/project/xsmiles/)
 
 - [TBD: KNIME pipeline example](http://)
 
