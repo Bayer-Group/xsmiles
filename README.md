@@ -34,19 +34,19 @@ year = {2022}
 
 ## Availability and examples
 
-- [TBD Demo website](https://)
+- [DEMO website](https://bayer-group.github.io/xsmiles/dist/web/)
 
 - [HOW TO use XSMILES (JupyterLab notebook)](https://github.com/Bayer-Group/xsmiles-jupyterlab/examples)
 
 - [TBD: HOW TO use XSMILES (Notebook in PDF)](http://)
 
-- [More examples with Jupyter Lab Notebooks](https://github.com/Bayer-Group/xsmiles-use-cases)
+- [More examples with JupyterLab Notebooks](https://github.com/Bayer-Group/xsmiles-use-cases)
 
-- [Jupyter Lab plugin](https://github.com/Bayer-Group/xsmiles-jupyterlab/)
+- [JupyterLab plugin](https://github.com/Bayer-Group/xsmiles-jupyterlab/)
 
 - [TBD: PiPY repository](http://)
 
-- [TBD: KNIME component](http://)
+- [TBD: KNIME pipeline example](http://)
 
 
 ![XSMILES](img/vis-example.png?raw=true)
@@ -54,10 +54,16 @@ year = {2022}
 
 ## Distributions formats
  
-XSMILES is distributed in 3 main formats and they are available in the `dist` folder.
+XSMILES (Javascript) is distributed in 3 main formats and they are available in the `dist` folder.
 Please go to the Readme from that folder for Details.
 
+## Simplest usage of XSMILES
+
+If you just want to use XSMILES, for example, as a Machine Learning expert, you may be interested in the [JupyterLab plugin](https://github.com/Bayer-Group/xsmiles-jupyterlab/) or [Demo website](https://bayer-group.github.io/xsmiles/dist/web/).
+
 ## Using XSMILES as npm package 
+
+If you are a web-developer, the npm package may be your option.
 
 **Requirement**: RDKit MinimalLib needs to be loaded as in `window.RDKit = RDKit;` before any XSMILES functionality is used.
 For the Demo Website of this project, you can see how we loaded it on files `src/index.tsx` and `public/index.html`.
@@ -82,7 +88,7 @@ You can use XSMILES from our `index.js` available at `dist/plain`.
 Once your webpage loads it, it will be available through the `window` global variable:
 
 ```javascript
-window.xsmiles.appendSingleView(col, setup);
+window.xsmiles.appendSingleView(div, setup);
 ```
 
 Please check `dist/knime` for an example of how it can be used within a Javascript code.
