@@ -34,17 +34,13 @@ year = {2022}
 
 ## Availability and examples
 
-- [DEMO website](https://bayer-group.github.io/xsmiles/dist/web/)
+- [Demonstration website](https://bayer-group.github.io/xsmiles/dist/web/)
 
-- [HOW TO use XSMILES (JupyterLab notebook)](https://github.com/Bayer-Group/xsmiles-jupyterlab/examples)
+- [How to use XSMILES (JupyterLab notebook)](https://github.com/Bayer-Group/xsmiles-jupyterlab/examples)
 
-- [TBD: HOW TO use XSMILES (Notebook in PDF)](http://)
-
-- [More examples with JupyterLab Notebooks](https://github.com/Bayer-Group/xsmiles-use-cases)
+- [Use cases from article: from model training to explanations (JupyterLab notebook)](https://github.com/Bayer-Group/xsmiles-use-cases)
 
 - [JupyterLab plugin](https://github.com/Bayer-Group/xsmiles-jupyterlab/)
-
-- [Unofficial Pypi repository](https://pypi.org/project/xsmiles/)
 
 - [TBD: KNIME pipeline example](http://)
 
