@@ -38,7 +38,7 @@ year = {2022}
 
 - [How to use XSMILES (JupyterLab notebook)](https://github.com/Bayer-Group/xsmiles-jupyterlab/examples)
 
-- [Use cases from article: from model training to explanations (JupyterLab notebook)](https://github.com/Bayer-Group/xsmiles-use-cases)
+- [Use cases: from model training to explanations (JupyterLab notebook)](https://github.com/Bayer-Group/xsmiles-use-cases)
 
 - [JupyterLab plugin](https://github.com/Bayer-Group/xsmiles-jupyterlab/)
 
