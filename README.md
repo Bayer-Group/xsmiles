@@ -45,8 +45,10 @@ year = {2022}
 - [TBD: KNIME pipeline example](http://)
 
 
-![XSMILES](img/vis-example.png?raw=true)
-![XSMILES](img/interactivity.png?raw=true)
+<!-- ![XSMILES](img/vis-example.png?raw=true | width=300) -->
+<img src="img/vis-example.png?raw=true" width="500" />
+<img src="img/interactivity.png?raw=true" width="500" />
+<!-- ![XSMILES](img/interactivity.png?raw=true | width=300) -->
 
 ## Distributions formats
  
