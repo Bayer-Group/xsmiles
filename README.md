@@ -12,17 +12,17 @@ To create the JSON file that can be used with the `demonstration website`, pleas
 
 If you use XSMILES, the use cases, its code, or the generated explanations, please cite our article:
 
-**Article in preparation**, a preprint should appear mid September!
+Preprint here: https://www.researchsquare.com/article/rs-2121152/v1
 
 ```
-Heberle, H., Zhao, L., Schmidt, S., Wolf, T., & Heinrich, J. (2022). XSMILES: interactive visualization for molecules, SMILES and XAI scores. Article in preparation.
+Heberle, H., Zhao, L., Schmidt, S., Wolf, T., & Heinrich, J. (2022). XSMILES: interactive visualization for molecules, SMILES and XAI scores. Research Square preprint. https://doi.org/10.21203/rs.3.rs-2121152/v1
 ```
 
 ```BibTeX
 @article{Heberle2022XSMILES,
 author = {Heberle, Henry and Zhao, Linlin and Schmidt, Sebastian and Wolf, Thomas and Heinrich, Julian},
-doi = {},
-journal = {Article in preparation},
+doi = {https://doi.org/10.21203/rs.3.rs-2121152/v1},
+journal = {Research Square preprint},
 month = {},
 number = {},
 pages = {},
