@@ -35,7 +35,7 @@ class ColorsService {
             midAngle += 180;
         }
 
-        console.log("HSL", hsl1, hsl2, maxAngle, minAngle, diffAngle, midAngle);
+        // console.log("HSL", hsl1, hsl2, maxAngle, minAngle, diffAngle, midAngle);
         return chroma
             .hsl(midAngle, (hsl1[1] + hsl2[1]) / 2, (hsl1[2] + hsl2[2]) / 2)
             .hex();
