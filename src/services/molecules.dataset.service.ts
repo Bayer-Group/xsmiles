@@ -20,6 +20,7 @@ class MoleculesDatasetService {
         return json.map((molecule: any) => {
             return {
                 string: molecule.string,
+                substructureHighlight: molecule.substructureHighlight,
                 sequence: molecule.sequence
                     ? [...molecule.sequence]
                     : undefined,

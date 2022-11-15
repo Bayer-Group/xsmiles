@@ -2,6 +2,7 @@
 export const example: any[] = [
     {
         string: "CCn1cc(CN2CCN(CC[NH+]3C(C)CCC3C)CC2)cn1",
+        substructureHighlight: "CCC",
         methods: [
             {
                 attributes: { logp: 0.47630000000000305, pred: " " },
@@ -118,6 +119,7 @@ export const example: any[] = [
     },
     {
         string: "O=C(Nc1nc(-c2ccc(F)c(F)c2)cs1)C1Cc2ccccc2O1",
+        substructureHighlight: "CC",
         methods: [
             {
                 attributes: { logp: 4.030500000000002, pred: " " },

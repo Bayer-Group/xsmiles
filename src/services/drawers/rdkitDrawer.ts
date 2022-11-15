@@ -18,7 +18,6 @@ const coordinatesFactory: {
     }[];
 } = {};
 
-
 export default class RDKitDrawer implements Drawer {
     gVertices: GVertex[];
     canvas: HTMLCanvasElement;
@@ -27,7 +26,6 @@ export default class RDKitDrawer implements Drawer {
     showScoresOnStructure: boolean; // this is used to control if the drawer should redraw in the Structure.tsx
 
     constructor(canvasID: string, molecule: Molecule, config: DrawerConfig) {
-        
         const rdkitMol = config.showScoresOnStructure
             ? this.getRDKitMolWithAtomNotes(molecule)
             : window.RDKit.get_mol(molecule.string);
@@ -51,11 +49,24 @@ export default class RDKitDrawer implements Drawer {
             // includeMetadata: true,
         };
 
+        if (molecule.substructureHighlight) {
+            console.log("smart", molecule.substructureHighlight);
+            const smarts = molecule.substructureHighlight;
+            const qmol = window.RDKit.get_qmol(smarts);
+            let substr = JSON.parse(rdkitMol.get_substruct_match(qmol));
+
+            drawOpts = {
+                ...drawOpts,
+                bonds: substr["bonds"],
+                atoms: substr["atoms"],
+            };
+        }
+
         this.molecule = molecule;
 
         const drawOptsString = JSON.stringify(drawOpts);
         const coordinatesFactoryID = molecule.string + drawOptsString;
-        
+
         var coordinates = coordinatesFactory[coordinatesFactoryID];
 
         // if coordinates for this molecule (positions of atoms) is unknown
@@ -74,8 +85,8 @@ export default class RDKitDrawer implements Drawer {
             }
             drawOpts = { ...drawOpts, atomColourPalette };
         }
-    
 
+        
         this.canvas = document.getElementById(canvasID) as HTMLCanvasElement;
         this.canvas.width = drawOpts.width;
         this.canvas.height = drawOpts.height;

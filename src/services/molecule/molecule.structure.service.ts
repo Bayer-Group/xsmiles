@@ -7,7 +7,7 @@ import {
     ProcessedMoleculeFromJson,
     RawMolecule,
     Vertex,
-} from "../../types/molecule.types"; 
+} from "../../types/molecule.types";
 import { Drawer } from "src/types/drawer.interface";
 
 //TODO RENAMING - remove confusion: Smiles, SmilesElements, IndexedSmilesElements
@@ -43,6 +43,9 @@ class MoleculeStructureService {
             attributes: processedJsonMolecule.attributes
                 ? processedJsonMolecule.attributes
                 : {}, // attributes};
+            substructureHighlight: processedJsonMolecule.substructureHighlight
+                ? processedJsonMolecule.substructureHighlight
+                : undefined,
         };
     }
 
@@ -406,7 +409,7 @@ class MoleculeStructureService {
         let ringID: number = 0;
         try {
             let inGroup: boolean = false;
-            console.log(smilesElements.map((e) => e.chars).join(""));
+            // console.log(smilesElements.map((e) => e.chars).join(""));
             for (let start = 0; start < smilesElements.length; start++) {
                 let smilesElement = smilesElements[start];
                 if (smilesElement.chars === "[") {
@@ -430,13 +433,13 @@ class MoleculeStructureService {
 
                         const lastIndex = ringContext.lastIndex;
                         visitedElementsIndexes = ringContext.visited;
-                        console.log(
-                            "Ring Context",
-                            visitedElementsIndexes,
-                            lastIndex,
-                            smilesElements[lastIndex],
-                            smilesElement
-                        );
+                        // console.log(
+                        //     "Ring Context",
+                        //     visitedElementsIndexes,
+                        //     lastIndex,
+                        //     smilesElements[lastIndex],
+                        //     smilesElement
+                        // );
                         if (lastIndex > 0) {
                             // if found an end
                             // set the ringId to the numerical smilesElement (they can only be in 1 ring because they define a ring)
@@ -558,9 +561,8 @@ class MoleculeStructureService {
         groupedElements: SmilesElement[],
         findGVertex: (gVertices: any[], smilesElement: SmilesElement) => any
     ): any | undefined => {
-        
         // because instead of the drawer, in the case of [N+] return the gVertex in the N, it returns it in the [... (or maybe in + or ])
-       
+
         let i: number = 0;
         let gVertex = findGVertex(vertices, groupedElements[i]);
         while (!gVertex && i < groupedElements.length) {
@@ -678,8 +680,6 @@ class MoleculeStructureService {
             ) {
                 let gVertex = findGVertex(gVertices, smilesElement);
                 if (gVertex == null) {
-               
-
                     if (smilesElement.groupIndex !== -1) {
                         const groupedElements = this.getElementsInTheSameGroup(
                             smilesElements,
