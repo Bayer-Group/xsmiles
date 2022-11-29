@@ -8,6 +8,8 @@ XSMILES uses the [RDKit MinimalLib](https://github.com/rdkit/rdkit) to draw the 
 
 To create the JSON file that can be used with the `demonstration website`, please check the "Jupyter Lab" and "Use Cases" related notebooks cited in section `Availability and examples` of this repository.
 
+XSMILES was tested with RDKit Canonical SMILES.
+
 ## Please Cite
 
 If you use XSMILES, the use cases, its code, or the generated explanations, please cite our article:
