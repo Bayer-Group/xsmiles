@@ -6,9 +6,9 @@ authors:
   orcid: "https://orcid.org/0000-0003-1964-268X"
 title: "XSMILES: interactive visualization for molecules, SMILES and XAI scores"
 version: 0.5.7
-doi: xxxxx
+doi: 10.21203/rs.3.rs-2121152/v1
 date-released: 2022-08-25
-url: "https://github.com/xsmiles"
+url: "https://github.com/Bayer-Group/xsmiles"
 preferred-citation:
   type: article
   authors:
@@ -27,12 +27,13 @@ preferred-citation:
   - family-names: "Heinrich"
     given-names: "Julian"
     orcid: "https://orcid.org/0000-0000-0000-0000"    
-  doi: "10.0000/00000"
-  journal: "Article in preparation."
-  month: 
+  doi: "10.21203/rs.3.rs-2121152/v1"
+  journal: "PREPRINT (Version 1) available at Research Square"
+  month: October
   start:  # First page number
   end:  # Last page number
   title: "XSMILES: interactive visualization for molecules, SMILES and XAI scores"
   issue: 
   volume: 
   year: 2022
+ 
