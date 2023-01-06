@@ -14,7 +14,7 @@ XSMILES was tested with RDKit Canonical SMILES.
 
 If you use XSMILES, the use cases, its code, or the generated explanations, please cite our article:
 
-Article: https://jcheminf.biomedcentral.com/articles/10.1186/s13321-022-00673-w
+https://jcheminf.biomedcentral.com/articles/10.1186/s13321-022-00673-w
 
 ```
 Heberle, H., Zhao, L., Schmidt, S. et al. XSMILES: interactive visualization for molecules, SMILES and XAI attribution scores. J Cheminform 15, 2 (2023). https://doi.org/10.1186/s13321-022-00673-w
