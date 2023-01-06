@@ -4,11 +4,11 @@ authors:
 - family-names: "Heberle"
   given-names: "Henry"
   orcid: "https://orcid.org/0000-0003-1964-268X"
-title: "XSMILES: interactive visualization for molecules, SMILES and XAI scores"
+title: "XSMILES: interactive visualization for molecules, SMILES and XAI attribution scores"
 version: 0.5.7
-doi: 10.21203/rs.3.rs-2121152/v1
+doi: 10.1186/s13321-022-00673-w
 date-released: 2022-08-25
-url: "https://github.com/Bayer-Group/xsmiles"
+url: "https://doi.org/10.1186/s13321-022-00673-w"
 preferred-citation:
   type: article
   authors:
@@ -27,13 +27,14 @@ preferred-citation:
   - family-names: "Heinrich"
     given-names: "Julian"
     orcid: "https://orcid.org/0000-0000-0000-0000"    
-  doi: "10.21203/rs.3.rs-2121152/v1"
-  journal: "PREPRINT (Version 1) available at Research Square"
-  month: October
+  doi: "10.1186/s13321-022-00673-w"
+  journal: "Journal of Cheminformatics"
+  month: "Jan"
+  day: 06
   start:  # First page number
   end:  # Last page number
-  title: "XSMILES: interactive visualization for molecules, SMILES and XAI scores"
+  title: "XSMILES: interactive visualization for molecules, SMILES and XAI attribution scores"
   issue: 
-  volume: 
-  year: 2022
+  volume: 15
+  year: 2023
  
