@@ -14,24 +14,30 @@ XSMILES was tested with RDKit Canonical SMILES.
 
 If you use XSMILES, the use cases, its code, or the generated explanations, please cite our article:
 
-Preprint here: https://www.researchsquare.com/article/rs-2121152/v1
+Article: https://jcheminf.biomedcentral.com/articles/10.1186/s13321-022-00673-w
 
 ```
-Heberle, H., Zhao, L., Schmidt, S., Wolf, T., & Heinrich, J. (2022). XSMILES: interactive visualization for molecules, SMILES and XAI scores. Research Square preprint. https://doi.org/10.21203/rs.3.rs-2121152/v1
+Heberle, H., Zhao, L., Schmidt, S. et al. XSMILES: interactive visualization for molecules, SMILES and XAI attribution scores. J Cheminform 15, 2 (2023). https://doi.org/10.1186/s13321-022-00673-w
 ```
 
 ```BibTeX
-@article{Heberle2022XSMILES,
-author = {Heberle, Henry and Zhao, Linlin and Schmidt, Sebastian and Wolf, Thomas and Heinrich, Julian},
-doi = {https://doi.org/10.21203/rs.3.rs-2121152/v1},
-journal = {Research Square preprint},
-month = {},
-number = {},
-pages = {},
-title = {{XSMILES: interactive visualization for molecules, SMILES and XAI scores}},
-volume = {},
-year = {2022}
+@article{Heberle2023XSMILES,
+author={Heberle, Henry and Zhao, Linlin and Schmidt, Sebastian and Wolf, Thomas and Heinrich, Julian},
+title={XSMILES: interactive visualization for molecules, SMILES and XAI attribution scores},
+journal={Journal of Cheminformatics},
+year={2023},
+month={Jan},
+day={06},
+volume={15},
+number={1},
+pages={2},
+abstract={Explainable artificial intelligence (XAI) methods have shown increasing applicability in chemistry. In this context, visualization techniques can highlight regions of a molecule to reveal their influence over a predicted property. For this purpose, some XAI techniques calculate attribution scores associated with tokens of SMILES strings or with atoms of a molecule. While an association of a score with an atom can be directly visually represented on a molecule diagram, scores computed for SMILES non-atom tokens cannot. For instance, a substring [N+] contains 3 non-atom tokens, i.e., [, {\$}{\$}+{\$}{\$}, and ], and their attributions, depending on the model, are not necessarily revealing an influence of the nitrogen atom over the predicted property; for that reason, it is not possible to represent the scores on a molecule diagram. Moreover, SMILES's notation is complex, foregrounding the need for techniques to facilitate the analysis of explanations associated with their tokens.},
+issn={1758-2946},
+doi={10.1186/s13321-022-00673-w},
+url={https://doi.org/10.1186/s13321-022-00673-w}
 }
+
+
 ```
 
 ## Availability and examples
