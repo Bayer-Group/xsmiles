@@ -1,4 +1,4 @@
-import { render } from "react-dom";
+import ReactDOM from "react-dom/client";
 import { Method, RawMolecule } from "../types/molecule.types";
 import {
     GradientConfig,
@@ -102,11 +102,13 @@ export const SingleView = (props: Props) => {
 };
 
 export const appendSingleView = (div: HTMLDivElement, props: Props) => {
-    render(<SingleView {...props} />, div);
+    const root = ReactDOM.createRoot(div);
+    root.render(<SingleView {...props} />);
 };
 
 export const appendSingleViewCallBack = (div: HTMLDivElement, props: Props, callback: ()=>void) => {
-    render(<SingleView {...props} />, div);
+    const root = ReactDOM.createRoot(div);
+    root.render(<SingleView {...props} />);
     callback();
 };
 
