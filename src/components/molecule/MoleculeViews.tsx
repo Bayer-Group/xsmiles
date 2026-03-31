@@ -78,7 +78,7 @@ class MoleculeViews extends React.Component<Props, State> {
 
     private createMolecule(rawMolecule: RawMolecule): Molecule {
         return moleculeStructureService.preprocessSmilesElementsAndMethod(
-            rawMolecule
+            rawMolecule,
         );
     }
 
@@ -133,7 +133,7 @@ class MoleculeViews extends React.Component<Props, State> {
 
         const { gradient, colorDomain, colorsRange } = this.updateColorMaps(
             gradientConfig,
-            molecule
+            molecule,
         );
 
         const {
@@ -143,7 +143,6 @@ class MoleculeViews extends React.Component<Props, State> {
             hideAttributesTable,
             structureColor,
         } = this.state.viewsConfig;
-
 
         const drawerConfig: DrawerConfig = {
             width: width,
@@ -156,10 +155,7 @@ class MoleculeViews extends React.Component<Props, State> {
             showScoresOnStructure,
         };
 
-  
-
         const structureViewConfig = { gradient, width, height };
-
 
         return (
             <div className="MoleculeView smiles-vis  py-0 my-3">
@@ -173,7 +169,7 @@ class MoleculeViews extends React.Component<Props, State> {
                             this.onMouseMoveOverStructure(
                                 event,
                                 molecule,
-                                scaleResolution
+                                scaleResolution,
                             )
                         }
                         returnMoleculeWithVertices={
@@ -223,27 +219,22 @@ class MoleculeViews extends React.Component<Props, State> {
     onMouseMoveOverStructure = (
         event: any,
         molecule: Molecule,
-        scaleResolution: number
+        scaleResolution: number,
     ) => {
-   
         if (molecule.vertices) {
-            
             const rect = event.target.getBoundingClientRect();
             const x = (event.clientX - rect.left) * scaleResolution; //x position within the element.
             const y = (event.clientY - rect.top) * scaleResolution; //y position within the element.
             const kd = this.state.kdTreeForAtoms;
             if (kd != null) {
-               
                 const ids = kd.within(x, y, 15);
                 if (ids.length === 0) {
-                    
                     molecule.vertices.forEach((v) => (v.hover = false));
-                    
+
                     this.setState({ mouseOverVertices: [] });
                 } else {
-                    
                     const hoverVertices = ids.map((i) => molecule.vertices![i]);
-                   
+
                     hoverVertices.forEach((v) => (v.hover = true));
                     this.setState({ mouseOverVertices: hoverVertices });
                 }
@@ -256,11 +247,11 @@ class MoleculeViews extends React.Component<Props, State> {
 
     private updateColorMaps(
         gradientConfig: GradientConfig,
-        molecule: Molecule
+        molecule: Molecule,
     ) {
         const colorDomain = gradientsService.getColorDomainWithDefaultIfEmpty(
             gradientConfig,
-            molecule.method.scores
+            molecule.method.scores,
         );
         gradientConfig.colorDomain = colorDomain;
         // colorDomain can be empty [] in the gradientConfig, here we want then to set a default behavior: calculate max |scores| and set it to -max, 0, max.
@@ -268,16 +259,16 @@ class MoleculeViews extends React.Component<Props, State> {
 
         const gradient = gradientsService.getGradient(gradientConfig);
         const colorsRange = colorsService.setMidColorGray(
-            gradient.palette.colors
+            gradient.palette.colors,
         );
-     // TODO move this to viewsConfig?
+        // TODO move this to viewsConfig?
         return { gradient, colorDomain, colorsRange };
     }
 
     private validate(indexedSmilesElements: SmilesElement[], method?: Method) {
         if (method && indexedSmilesElements.length !== method.scores.length) {
             throw new Error(
-                "Number of scores is different than number of items in the smiles vector."
+                "Number of scores is different than number of items in the smiles vector.",
             );
         }
     }
