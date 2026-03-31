@@ -1,6 +1,6 @@
 {
     "name": "xsmiles",
-    "version": "0.6.5",
+    "version": "0.6.6",
     "author": "Henry Heberle",
     "keywords": [
         "xai",
@@ -29,7 +29,7 @@
         "chroma-js": "^2.4.2",
         "d3": "^7.6.1",
         "heatmap.js": "^2.0.5",
-        "kdbush": "^3.0.0",
+        "kdbush": "^4.0.2",
         "node": "^16.17.0",
         "react-dropzone": "^14.2.2",
         "react-loading-overlay-ts": "^2.0.0",
@@ -69,7 +69,6 @@
         "@testing-library/jest-dom": "^5.11.9",
         "@types/chroma-js": "^2.1.4",
         "@types/d3": "^7.4.0",
-        "@types/kdbush": "^3.0.0",
         "@types/react": "^18.0.6",
         "@types/react-dom": "^18.0.6",
         "copy-webpack-plugin": "^11.0.0",
