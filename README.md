@@ -52,6 +52,8 @@ url={https://doi.org/10.1186/s13321-022-00673-w}
 
 - [TBD: KNIME pipeline example](http://)
 
+> **Note on KNIME**: A pre-built KNIME workflow file (`.knwf`) was available up to version `0.6.6`. Starting with version `0.7.0`, the `.knwf` file is no longer distributed, but users can recreate it in KNIME using the JavaScript file available at `dist/plain/index.js` and the example code at `dist/knime/GenericJavascriptView.js`. See the [Using XSMILES as Plain javascript](#using-xsmiles-as-plain-javascript) section for details.
+
 
 <!-- ![XSMILES](img/vis-example.png?raw=true | width=300) -->
 <img src="img/vis-example.png?raw=true" width="500" />
@@ -82,7 +84,7 @@ Run `npm install xsmiles` (unofficial) to install the module package and use XSM
 
 If `xsmiles` is not in the `npm repository`, please download the one of the released versions from this repository and run the code below, changing the version accordingly:
 
-`npm install xsmiles-0.5.7.tgz`
+`npm install xsmiles-0.7.0.tgz`
 
 
 ## Using XSMILES as Plain javascript
@@ -100,6 +102,7 @@ window.xsmiles.appendSingleView(div, setup);
 Please check `dist/knime` for an example of how it can be used within a Javascript code.
 In that example, we have XSMILES working in a KNIME's Javascript View.
 The `xsmiles.js` is injected in the View through a "table" that is converted to a "variable".
+The plain JS file (`dist/plain/index.js`) is rebuilt automatically when running `npm run build`, so it is always up to date with the latest XSMILES version.
 For more details, please refer to the KNIME example referred at the top of this page.
 
 ## Running the Demonstration website locally
