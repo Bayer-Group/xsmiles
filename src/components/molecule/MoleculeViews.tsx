@@ -105,10 +105,22 @@ class MoleculeViews extends React.Component<Props, State> {
     };
 
     returnMoleculeWithVertices = (molecule: Molecule) => {
-        const newState = { molecule, kdTreeForAtoms: undefined };
+        const kdTreeForAtoms = molecule.vertices
+            ? this.buildKDTree(molecule.vertices)
+            : undefined;
+        const newState = { molecule, kdTreeForAtoms };
         if (this.state.molecule !== molecule) this.setState(newState);
         if (this.state.molecule.vertices == null) this.setState(newState);
     };
+
+    private buildKDTree(vertices: Vertex[]): KDBush {
+        const index = new KDBush(vertices.length, 64, Float64Array);
+        for (const { position } of vertices) {
+            index.add(position.x, position.y);
+        }
+        index.finish();
+        return index;
+    }
 
     render() {
         const molecule = this.state.molecule;
@@ -236,15 +248,7 @@ class MoleculeViews extends React.Component<Props, State> {
                     this.setState({ mouseOverVertices: hoverVertices });
                 }
             } else {
-               
-                const index = new KDBush(
-                    molecule.vertices.length,
-                    1,
-                    Int16Array //vertices,
-                );
-
-                for (const {position} of molecule.vertices) index.add(position.x, position.y);
-                index.finish();
+                const index = this.buildKDTree(molecule.vertices);
                 this.setState({ kdTreeForAtoms: index });
             }
         }
