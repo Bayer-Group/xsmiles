@@ -22,3 +22,5 @@ This is a Javascript version that can be loaded in any website just by importing
 ## Knime
 
 Once you have Plain into a table in Knime and exporting it as  a variable to connect to the JavascriptView (Knime), you can use this code in the JavascriptView. You will also need to add to the JavascriptView the CSS from here: [widget.css](https://github.com/Bayer-Group/xsmiles-jupyterlab/blob/main/css/widget.css)
+
+> **Note**: A pre-built KNIME workflow file (`.knwf`) was available up to version `0.6.6`. Starting with `0.7.0`, the `.knwf` file is no longer distributed, but you can recreate it in KNIME using `dist/plain/index.js` and the example code in `dist/knime/GenericJavascriptView.js`.

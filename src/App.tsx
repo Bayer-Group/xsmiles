@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
-import LoadingOverlay from "react-loading-overlay-ts";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 import {
     DomainByModelHash,
@@ -218,11 +221,16 @@ class App extends React.Component<Props, State> {
                     defaultDrawerType={this.defaultDrawerType}
                 />
 
-                <LoadingOverlay
-                    active={this.state.isLoading}
-                    spinner
-                    text="Rendering molecules..."
+                <Backdrop
+                    open={this.state.isLoading}
+                    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                 >
+                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <CircularProgress color="inherit" />
+                        <Typography sx={{ mt: 2 }}>Rendering molecules...</Typography>
+                    </Box>
+                </Backdrop>
+
                     <div
                         key={5}
                         className="row"
@@ -261,7 +269,6 @@ class App extends React.Component<Props, State> {
                                 )}
                         </div>
                     </div>
-                </LoadingOverlay>
             </div>
         );
     }
